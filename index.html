@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+        <title>Enhanced HTML5 Content & Form </title>
+      
+        <meta name="description" content="Explore advanced HTML5 content with lists, tables, media, and a fully validated contact form. Featuring Rowney's." />
+        <meta name="keywords" content="Rowney, HTML5 form, HTML5 validation, product features, multimedia content, contact form, accessible forms" />
+        <meta name="author" content="Rowney" />
+      </head>
+      
+<body>
+
+  <header>
+    <h1>Welcome to Our Product Info & Feedback Page</h1>
+    <p>This page demonstrates lists, tables, media embedding, and an advanced HTML5 form with validation.</p>
+  </header>
+
+  <main>
+
+    <!-- Section 1: Lists -->
+    <section>
+      <h2>Product Features</h2>
+      <p>Here are some key features of our flagship product:</p>
+      <ul>
+        <li>Lightweight and portable</li>
+        <li>Long-lasting battery life (up to 12 hours)</li>
+        <li>Water-resistant and durable design</li>
+        <li>Easy connectivity with multiple devices</li>
+      </ul>
+
+      <h3>Compatible Devices</h3>
+      <ol>
+        <li>Smartphones (iOS and Android)</li>
+        <li>Laptops and tablets</li>
+        <li>Bluetooth-enabled speakers</li>
+        <li>Wearable devices</li>
+      </ol>
+    </section>
+
+    <!-- Section 2: Table -->
+    <section>
+      <h2>Pricing and Availability</h2>
+      <table border="1" summary="Pricing and availability for different product models">
+        <caption>Product Models and Prices</caption>
+        <thead>
+          <tr>
+            <th scope="col">Model</th>
+            <th scope="col">Color Options</th>
+            <th scope="col">Price (USD)</th>
+            <th scope="col">Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>Black, White</td>
+            <td>49.99</td>
+            <td>In Stock</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>Black, Silver</td>
+            <td>79.99</td>
+            <td>Pre-order</td>
+          </tr>
+          <tr>
+            <td>Elite</td>
+            <td>Silver, Gold</td>
+            <td>119.99</td>
+            <td>Coming Soon</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3: Media -->
+    <section>
+      <h2>Product Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x250" alt="Product image showing the device in black color" width="400" height="250" />
+        <figcaption>Our flagship product in black color.</figcaption>
+      </figure>
+
+      <h3>Product Demo Video</h3>
+      <video controls width="400" preload="metadata">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Sorry, your browser does not support the video element.
+      </video>
+
+      <h3>Background Music</h3>
+      <audio controls preload="metadata">
+        <source src="assets/Royalty Free Music Audio.mp3" type="audio/ogg" />
+        <source src="assets/Royalty Free Music Audio.mp3" type="audio/mpeg" />
+        Sorry, your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- Section 4: Form -->
+    <section>
+      <h2>Contact & Feedback Form</h2>
+      <form action="#" method="post" autocomplete="on" novalidate>
+        
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fname">First Name: *</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Enter your first name"
+            required
+            minlength="2"
+            maxlength="30"
+            autocomplete="given-name"
+          />
+          <br /><br />
+
+          <label for="lname">Last Name: *</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Enter your last name"
+            required
+            minlength="2"
+            maxlength="30"
+            autocomplete="family-name"
+          />
+          <br /><br />
+
+          <label for="email">Email Address: *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+            autocomplete="email"
+          />
+          <br /><br />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+1-555-555-5555"
+            pattern="^\+?[0-9\s\-]{7,15}$"
+            autocomplete="tel"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Product Interest</legend>
+
+          <label for="product">Select Product: *</label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a product</option>
+            <option value="basic">Basic Model</option>
+            <option value="pro">Pro Model</option>
+            <option value="elite">Elite Model</option>
+          </select>
+          <br /><br />
+
+          <label for="quantity">Quantity: *</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            max="10"
+            value="1"
+            required
+          />
+          <br /><br />
+
+          <label>Preferred Contact Method: *</label><br />
+          <input type="radio" id="contact_email" name="contact_method" value="email" required />
+          <label for="contact_email">Email</label><br />
+          <input type="radio" id="contact_phone" name="contact_method" value="phone" />
+          <label for="contact_phone">Phone</label>
+          <br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+
+          <label for="comments">Comments or Questions:</label><br />
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            cols="40"
+            placeholder="Write your message here..."
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+          <br /><br />
+
+          <label for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            Subscribe to our newsletter (readonly)
+          </label>
+          <input type="hidden" name="newsletter_status" value="readonly" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Security Check</legend>
+
+          <label for="captcha" >What is 3 + 4? *</label>
+          <input
+            type="text"
+            id="captcha"
+            name="captcha"
+            pattern="7"
+            placeholder="Enter the result"
+            required
+            autocomplete="off"
+          />
+        </fieldset>
+
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Forms Co.</p>
+  </footer>
+
+</body>
+</html>
